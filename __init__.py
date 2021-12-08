@@ -1,5 +1,8 @@
 from mycroft import MycroftSkill, intent_file_handler
+import caldav
+from caldav.elements import dav
 
+caldav_url = "https://nextcloud.humanoidlab.hdm-stuttgart.de/remote.php/dav"
 
 class NextcloudCalender(MycroftSkill):
     def __init__(self):
@@ -16,6 +19,8 @@ class NextcloudCalender(MycroftSkill):
         self.password = self.settings.get('password')
         if not self.password:
             self.log.info('failed to retrieve password')
+            
+        client = caldav.DAVClient(url=caldav_url, username=self.user, password=self.password)
             
 
     @intent_file_handler('calender.nextcloud.intent')
