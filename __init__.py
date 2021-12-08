@@ -19,7 +19,6 @@ class NextcloudCalender(MycroftSkill):
         if not self.password:
             self.log.info('failed to retrieve password')
             
-        client = caldav.DAVClient(url=caldav_url, username=self.user, password=self.password)
             
 
     @intent_file_handler('calender.nextcloud.intent')
