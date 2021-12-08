@@ -1,6 +1,5 @@
 from mycroft import MycroftSkill, intent_file_handler
 import caldav
-from caldav.elements import dav
 
 caldav_url = "https://nextcloud.humanoidlab.hdm-stuttgart.de/remote.php/dav"
 
