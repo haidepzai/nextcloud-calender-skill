@@ -1,7 +1,4 @@
 from mycroft import MycroftSkill, intent_file_handler
-import caldav
-
-caldav_url = "https://nextcloud.humanoidlab.hdm-stuttgart.de/remote.php/dav"
 
 class NextcloudCalender(MycroftSkill):
     def __init__(self):
